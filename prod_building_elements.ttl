@@ -1,0 +1,131 @@
+# Copyright 2017 W3C Linked Building Data Community Group.
+# 
+# This work is licensed under a Creative Commons Attribution License. 
+# This copyright applies to the PROD Vocabulary Specification and
+# accompanying documentation in RDF. Regarding underlying technology,
+# PROD uses W3C's RDF technology, an open Web standard that can be freely 
+# used by anyone.
+
+@prefix rdf:    <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix owl:    <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs:   <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd:    <http://www.w3.org/2001/XMLSchema#> .
+@prefix dcterms:<http://purl.org/dc/terms/> .
+@prefix vann:   <http://purl.org/vocab/vann/> .
+@prefix voaf:   <http://purl.org/vocommons/voaf#> .
+@prefix vs:     <http://www.w3.org/2003/06/sw-vocab-status/ns#> .
+@prefix foaf:   <http://xmlns.com/foaf/0.1/> .
+@prefix dce:    <http://purl.org/dc/elements/1.1/> .
+@prefix dbo:    <http://dbpedia.org/ontology/> .
+@prefix bot:    <https://w3id.org/bot#> .
+@prefix ifc:    <http://ifcowl.openbimstandards.org/IFC4_ADD2#> .
+
+@prefix prod: <https://w3id.org/prod#> . #NB! Not decided yet
+@base <https://w3id.org/prod#> .         #NB! Not decided yet
+
+voaf:Vocabulary a owl:Class .
+dcterms:title a owl:AnnotationProperty .
+dcterms:description a owl:AnnotationProperty .
+dcterms:issued a owl:AnnotationProperty .
+dcterms:modified a owl:AnnotationProperty .
+dcterms:creator a owl:AnnotationProperty .
+dcterms:contributor a owl:AnnotationProperty .
+dcterms:license a owl:AnnotationProperty .
+vann:preferredNamespacePrefix a owl:AnnotationProperty .
+vann:preferredNamespaceUri a owl:AnnotationProperty .
+vs:term_status a owl:AnnotationProperty .
+foaf:Person a owl:Class .
+foaf:name a owl:DatatypeProperty .
+
+#################################
+# METADATA
+#################################
+prod:BuildingElements a owl:Ontology , voaf:Vocabulary ;
+    dce:modified "July 11th 2017"^^xsd:string ;
+    owl:versionInfo "July 11th 2017"^^xsd:string ;
+    dcterms:issued "2016-05-25"^^xsd:date ;
+    #owl:versionIRI <https://w3id.org/prod/prod-0.1.0> ;
+    owl:versionInfo "v0.1.0" ;
+    #owl:priorVersion <https://w3id.org/prod/prod-0.1.0> ;
+    dcterms:title "PROD Building Elements"@en ;
+    dcterms:description """The Building Elements extends the PROD ontology with building elements."""@en ;
+    dcterms:creator [a foaf:Person ; foaf:name "Mads Holten Rasmussen" ] ;
+    dcterms:creator [a foaf:Person ; foaf:name "Pieter Pauwels" ] ;
+    #dcterms:contributor [a foaf:Person ; foaf:name "" ] ;
+    dcterms:license <https://creativecommons.org/licenses/by/1.0/> ;
+    vann:preferredNamespacePrefix "prod" ;
+    vann:preferredNamespaceUri <https://w3id.org/prod#> ;
+    dce:Language "en" ;
+    dce:title "PROD" ;
+    dce:description "Products in the AEC industry" ;
+    owl:imports <https://w3id.org/prod/BuildingElements> .
+
+#################################
+# CLASSES
+#################################
+prod:Wall
+        a owl:Class ;
+        owl:equivalentClass ifc:IfcWall ;
+        rdfs:subClassOf prod:Product ;
+        rdfs:label      "Wall"@en ,
+                        "Væg"@da .
+prod:Window
+        a owl:Class ;
+        rdfs:subClassOf prod:Product ;
+        rdfs:label      "Window"@en ,
+                        "Vindue"@da .
+prod:Door
+        a owl:Class ;
+        rdfs:subClassOf prod:Product ;
+        rdfs:label      "Door"@en ,
+                        "Dør"@da .
+prod:Beam
+        a owl:Class ;
+        rdfs:subClassOf prod:Product ;
+        rdfs:label      "Beam"@en ,
+                        "Bjælke"@da .
+prod:Chimney
+        a owl:Class ;
+        rdfs:subClassOf prod:Product ;
+        rdfs:label      "Chimney"@en ,
+                        "Skorsten"@da .
+prod:Column
+        a owl:Class ;
+        rdfs:subClassOf prod:Product ;
+        rdfs:label      "Column"@en ,
+                        "Søjle"@da .
+prod:CurtainWall
+        a owl:Class ;
+        rdfs:subClassOf prod:Product ;
+        rdfs:label      "Curtain Wall"@en ,
+                        "Curtain Wall"@da .
+prod:Slab
+        a owl:Class ;
+        rdfs:subClassOf prod:Product ;
+        rdfs:label      "Slab"@en ,
+                        "Dæk"@da .
+prod:Railing
+        a owl:Class ;
+        rdfs:subClassOf prod:Product ;
+        rdfs:label      "Railing"@en ,
+                        "Gelænder"@da .
+prod:Ramp
+        a owl:Class ;
+        rdfs:subClassOf prod:Product ;
+        rdfs:label      "Ramp"@en ,
+                        "Rampe"@da .
+prod:Roof
+        a owl:Class ;
+        rdfs:subClassOf prod:Product ;
+        rdfs:label      "Roof"@en ,
+                        "Tag"@da .
+prod:ShadingDevice
+        a owl:Class ;
+        rdfs:subClassOf prod:Product ;
+        rdfs:label      "Shading Device"@en ,
+                        "Afskærmningsanordning"@da .
+prod:Stair
+        a owl:Class ;
+        rdfs:subClassOf prod:Product ;
+        rdfs:label      "Stair"@en ,
+                        "Trappe"@da .

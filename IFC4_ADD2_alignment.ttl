@@ -1,0 +1,16 @@
+@prefix ifc:  <http://ifcowl.openbimstandards.org/IFC4_ADD2#> .
+@prefix prod: <https://w3id.org/prod#> .
+
+prod:Wall owl:equivalentClass ifc:IfcWall .
+prod:Window owl:equivalentClass ifc:IfcWindow .
+prod:Door owl:equivalentClass ifc:IfcDoor .
+prod:Beam owl:equivalentClass ifc:IfcBeam .
+prod:Chimney owl:equivalentClass ifc:IfcChimney .
+prod:Column owl:equivalentClass ifc:IfcColumn .
+prod:CurtainWall owl:equivalentClass ifc:IfcCurtainWall .
+prod:Slab owl:equivalentClass ifc:IfcSlab .
+prod:Railing owl:equivalentClass ifc:IfcRailing .
+prod:Ramp owl:equivalentClass ifc:IfcRamp .
+prod:Roof owl:equivalentClass ifc:IfcRoof .
+prod:ShadingDevice owl:equivalentClass ifc:IfcShadingDevice .
+prod:Stair owl:equivalentClass ifc:IfcStair .
