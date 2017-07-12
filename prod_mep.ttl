@@ -67,6 +67,12 @@ product:MEP a owl:Ontology , voaf:Vocabulary ;
 #########
 # WATER #
 #########
+product:Pipe
+        a owl:Class ;
+        owl:equivalentClass dbr:Pipe_(fluid_conveyance) ;
+        rdfs:subClassOf product:Product ;
+        rdfs:label      "Pipe"@en ,
+                        "Rør"@da .
 product:Valve
         a owl:Class ;
         owl:equivalentClass dbr:Valve ;
@@ -83,14 +89,47 @@ product:Meter
         rdfs:subClassOf product:Product ;
         rdfs:label      "Meter"@en ,
                         "Måler"@da .
+product:Pump
+        a owl:Class ;
+        rdfs:subClassOf product:Product ;
+        rdfs:label      "Pump"@en ,
+                        "Pumpe"@da .
+product:Coil
+        a owl:Class ;
+        rdfs:subClassOf product:Product ;
+        rdfs:label      "Coil"@en ,
+                        "Flade"@da .
+product:Humidifier
+        a owl:Class ;
+        rdfs:subClassOf product:Product ;
+        rdfs:label      "Humidifier"@en ,
+                        "Befugter"@da .
+product:HeatExchanger
+        a owl:Class ;
+        rdfs:subClassOf product:Product ;
+        rdfs:label      "Heat Exchanger"@en ,
+                        "Varmeveksler"@da .
 #######
 # AIR #
 #######
+product:Duct
+        a owl:Class ;
+        owl:equivalentClass dbr:Duct_(HVAC) ;
+        rdfs:subClassOf product:Product ;
+        rdfs:label      "Duct"@en ,
+                        "Kanal"@da .
 product:Damper
         a owl:Class ;
+        owl:equivalentClass dbr:Damper_(flow) ;
         rdfs:subClassOf product:Product ;
         rdfs:label      "Damper"@en ,
                         "Spjæld"@da .
+product:DuctTransition
+        a owl:Class ;
+        rdfs:subClassOf product:Product ;
+        rdfs:label      "Duct Transition"@en ,
+                        "Kanalovergange"@da .
+
 
 #################################
 # SUBCLASSES (SPECIFIC PRODUCTS)
@@ -99,13 +138,13 @@ product:Damper
 # WATER #
 #########
 # VALVES
-product:ShutOffValve
+product:GateValve
         a owl:Class ;
         rdfs:subClassOf product:Valve ;
-        rdfs:label      "Shut-off Valve"@en ,
+        rdfs:label      "Geta Valve"@en ,
                         "Afspærringsventil"@da ;
         skos:altLabel   "2-way Valve"@en ,
-                        "Gate Valve"@en ,
+                        "Shut-off Valve"@en ,
                         "2-vejs Ventil"@da .
 product:CommissioningValve
         a owl:Class ;
@@ -187,6 +226,101 @@ product:EnergyMeter
         rdfs:subClassOf product:Meter ;
         rdfs:label      "Energy Meter"@en ,
                         "Energimåler"@da .
+# PUMPS
+product:PumpSump
+        a owl:Class ;
+        rdfs:subClassOf product:Pump ;
+        rdfs:label      "Pump Sump"@en ,
+                        "Pumpesump"@da .
+product:CirculationPump
+        a owl:Class ;
+        rdfs:subClassOf product:Pump ;
+        rdfs:label      "Circulation Pump"@en ,
+                        "Cirkulationspumpe"@da .
+product:BoosterPump
+        a owl:Class ;
+        rdfs:subClassOf product:Pump ;
+        rdfs:label      "Booster Pump"@en ,
+                        "Trykforøgerpumpe"@da .
+product:SubmersiblePump
+        a owl:Class ;
+        rdfs:subClassOf product:Pump ;
+        rdfs:label      "Submersible Pump"@en ,
+                        "Dykpumpe"@da .
+# COILS
+product:HeatingCoil
+        a owl:Class ;
+        rdfs:subClassOf product:Coil ;
+        rdfs:label      "Heating Coil"@en ,
+                        "Varmeflade"@da .
+product:CoolingCoil
+        a owl:Class ;
+        rdfs:subClassOf product:Coil ;
+        rdfs:label      "Cooling Coil"@en ,
+                        "Køleflade"@da .
+# HEAT EXCHANGERS
+product:CounterFlowHeatExchanger
+        a owl:Class ;
+        rdfs:subClassOf product:HeatExchanger ;
+        rdfs:label      "Counter Flow Heat Exchanger"@en ,
+                        "Modstrømsveksler"@da .
+product:CrossFlowHeatExchanger
+        a owl:Class ;
+        rdfs:subClassOf product:HeatExchanger ;
+        rdfs:label      "Cross Flow Heat Exchanger"@en ,
+                        "Krydsveksler"@da .
 #######
 # AIR #
 #######
+# DUCTS
+product:RectangularDuct
+        a owl:Class ;
+        rdfs:subClassOf product:Duct ;
+        rdfs:label      "Rectangular Duct"@en ,
+                        "Rektangular Kanal"@da .
+product:RoundDuct
+        a owl:Class ;
+        rdfs:subClassOf product:Duct ;
+        rdfs:label      "Round Duct"@en ,
+                        "Rund Kanal"@da .
+product:OvalDuct
+        a owl:Class ;
+        rdfs:subClassOf product:Duct ;
+        rdfs:label      "Oval Duct"@en ,
+                        "Oval Kanal"@da .
+product:BuildingIntegratedDuct
+        a owl:Class ;
+        rdfs:subClassOf product:Duct ;
+        rdfs:label      "Building Integrated Duct"@en ,
+                        "Bygningsintegreret Kanal"@da .
+
+# DAMPERS
+product:CheckDamper
+        a owl:Class ;
+        rdfs:subClassOf product:Damper ;
+        rdfs:label      "Check Damper"@en ,
+                        "Kontraspjæld"@da .
+product:GateDamper
+        a owl:Class ;
+        rdfs:subClassOf product:GateDamper ;
+        rdfs:label      "Gate Damper"@en ,
+                        "Afspærringsspjæld"@da .
+# TRANSITIONS
+
+#################################
+# CONSTRAINTS
+#################################
+# Disjunctive classes
+[] a owl:AllDisjointClasses ;
+        owl:members
+              ( prod:Valve
+                prod:Fitting
+                prod:Pump
+                prod:Meter
+                prod:Coil
+                prod:Humidifier
+                prod:HeatExchanger
+                prod:Damper
+                prod:DuctTransition
+                prod:Duct
+                prod:Pipe ) .
