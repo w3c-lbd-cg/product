@@ -1,0 +1,192 @@
+# Copyright 2017 W3C Linked Building Data Community Group.
+# 
+# This work is licensed under a Creative Commons Attribution License. 
+# This copyright applies to the PRODUCT Vocabulary Specification and
+# accompanying documentation in RDF. Regarding underlying technology,
+# PRODUCT uses W3C's RDF technology, an open Web standard that can be freely 
+# used by anyone.
+
+@prefix rdf:    <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix owl:    <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs:   <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd:    <http://www.w3.org/2001/XMLSchema#> .
+@prefix dcterms:<http://purl.org/dc/terms/> .
+@prefix vann:   <http://purl.org/vocab/vann/> .
+@prefix voaf:   <http://purl.org/vocommons/voaf#> .
+@prefix vs:     <http://www.w3.org/2003/06/sw-vocab-status/ns#> .
+@prefix foaf:   <http://xmlns.com/foaf/0.1/> .
+@prefix dce:    <http://purl.org/dc/elements/1.1/> .
+@prefix skos:   <http://www.w3.org/2004/02/skos/core#> .
+@prefix dbo:    <http://dbpedia.org/ontology/> .
+@prefix dbr:    <http://dbpedia.org/resource/> .
+@prefix bot:    <https://w3id.org/bot#> .
+@prefix ifc:    <http://www.buildingsmart-tech.org/ifcOWL/IFC4_ADD2#> .
+
+@prefix product: <https://w3id.org/product#> .
+@base <https://w3id.org/product#> . 
+
+voaf:Vocabulary a owl:Class .
+dcterms:title a owl:AnnotationProperty .
+dcterms:description a owl:AnnotationProperty .
+dcterms:issued a owl:AnnotationProperty .
+dcterms:modified a owl:AnnotationProperty .
+dcterms:creator a owl:AnnotationProperty .
+dcterms:contributor a owl:AnnotationProperty .
+dcterms:license a owl:AnnotationProperty .
+vann:preferredNamespacePrefix a owl:AnnotationProperty .
+vann:preferredNamespaceUri a owl:AnnotationProperty .
+vs:term_status a owl:AnnotationProperty .
+foaf:Person a owl:Class .
+foaf:name a owl:DatatypeProperty .
+
+#################################
+# METADATA
+#################################
+product:MEP a owl:Ontology , voaf:Vocabulary ;
+    dce:modified "July 12th 2017"^^xsd:string ;
+    owl:versionInfo "July 12th 2017"^^xsd:string ;
+    dcterms:issued "2017-07-12"^^xsd:date ;
+    #owl:versionIRI <https://w3id.org/product/product-0.1.0> ;
+    owl:versionInfo "v0.1.0" ;
+    #owl:priorVersion <https://w3id.org/product/product-0.1.0> ;
+    dcterms:title "PRODUCT MEP"@en ;
+    dcterms:description """The Mechanical, Electrical and Plumbing (MEP) ontology extends the PRODUCT ontology with specific MEP products."""@en ;
+    dcterms:creator [a foaf:Person ; foaf:name "Mads Holten Rasmussen" ] ;
+    dcterms:creator [a foaf:Person ; foaf:name "Pieter Pauwels" ] ;
+    #dcterms:contributor [a foaf:Person ; foaf:name "" ] ;
+    dcterms:license <https://creativecommons.org/licenses/by/1.0/> ;
+    vann:preferredNamespacePrefix "product" ;
+    vann:preferredNamespaceUri <https://w3id.org/product#> ;
+    dce:Language "en" ;
+    dce:title "PRODUCT MEP" ;
+    dce:description "Products in the AEC industry" .
+
+#################################
+# MAIN CLASSES (CATEGORIES)
+#################################
+#########
+# WATER #
+#########
+product:Valve
+        a owl:Class ;
+        owl:equivalentClass dbr:Valve ;
+        rdfs:subClassOf product:Product ;
+        rdfs:label      "Valve"@en ,
+                        "Ventil"@da .
+product:Fitting
+        a owl:Class ;
+        rdfs:subClassOf product:Product ;
+        rdfs:label      "Fitting"@en ,
+                        "Fitting"@da .
+product:Meter
+        a owl:Class ;
+        rdfs:subClassOf product:Product ;
+        rdfs:label      "Meter"@en ,
+                        "Måler"@da .
+#######
+# AIR #
+#######
+product:Damper
+        a owl:Class ;
+        rdfs:subClassOf product:Product ;
+        rdfs:label      "Damper"@en ,
+                        "Spjæld"@da .
+
+#################################
+# SUBCLASSES (SPECIFIC PRODUCTS)
+#################################
+#########
+# WATER #
+#########
+# VALVES
+product:ShutOffValve
+        a owl:Class ;
+        rdfs:subClassOf product:Valve ;
+        rdfs:label      "Shut-off Valve"@en ,
+                        "Afspærringsventil"@da ;
+        skos:altLabel   "2-way Valve"@en ,
+                        "Gate Valve"@en ,
+                        "2-vejs Ventil"@da .
+product:CommissioningValve
+        a owl:Class ;
+        rdfs:subClassOf product:Valve ;
+        rdfs:label      "Commissioning Valve"@en ,
+                        "Indreguleringsventil"@da .
+product:StaticCommissioningValve
+        a owl:Class ;
+        rdfs:subClassOf product:CommissioningValve ;
+        rdfs:label      "Static Commissioning Valve"@en ,
+                        "Statisk Indreguleringsventil"@da .
+product:DynamicCommissioningValve
+        a owl:Class ;
+        rdfs:subClassOf product:CommissioningValve ;
+        rdfs:label      "Dynamic Commissioning Valve"@en ,
+                        "Dynamisk Indreguleringsventil"@da .
+product:CirculationValve
+        a owl:Class ;
+        rdfs:subClassOf product:Valve ;
+        rdfs:label      "Circulation Valve"@en ,
+                        "Cirkulationsventil"@da .
+product:TermostaticValve
+        a owl:Class ;
+        rdfs:subClassOf product:Valve ;
+        rdfs:label      "Termostatic Valve"@en ,
+                        "Termostatventil"@da .
+product:SafetyValve
+        a owl:Class ;
+        rdfs:subClassOf product:Valve ;
+        rdfs:label      "Safety Valve"@en ,
+                        "Sikkerhedsventil"@da .
+product:CheckValve
+        a owl:Class ;
+        rdfs:subClassOf product:Valve ;
+        rdfs:label      "Check Valve"@en ,
+                        "Kontraventil"@da .
+# FITTINGS
+product:Bend
+        a owl:Class ;
+        rdfs:subClassOf product:Fitting ;
+        rdfs:label      "Bend"@en ,
+                        "Bøjning"@da ;
+        skos:altLabel   "Angle"@en ,
+                        "Vinkel"@da .
+product:Tee
+        a owl:Class ;
+        rdfs:subClassOf product:Fitting ;
+        rdfs:label      "Tee"@en ,
+                        "T-stykke"@da ;
+        skos:altLabel   "Tee"@da .
+product:Cross
+        a owl:Class ;
+        rdfs:subClassOf product:Fitting ;
+        rdfs:label      "Cross"@en ,
+                        "Kryds"@da .
+product:Union
+        a owl:Class ;
+        rdfs:subClassOf product:Fitting ;
+        rdfs:label      "Union"@en ,
+                        "Union"@da .
+product:Manifold
+        a owl:Class ;
+        rdfs:subClassOf product:Fitting ;
+        rdfs:label      "Manifold"@en ,
+                        "Fordelerrør"@da .
+product:Cap
+        a owl:Class ;
+        rdfs:subClassOf product:Fitting ;
+        rdfs:label      "Cap"@en ,
+                        "Prop"@da .
+# METERS
+product:FlowMeter
+        a owl:Class ;
+        rdfs:subClassOf product:Meter ;
+        rdfs:label      "Flow Meter"@en ,
+                        "Volumenstrømsmåler"@da .
+product:EnergyMeter
+        a owl:Class ;
+        rdfs:subClassOf product:Meter ;
+        rdfs:label      "Energy Meter"@en ,
+                        "Energimåler"@da .
+#######
+# AIR #
+#######
