@@ -18,9 +18,9 @@
 @prefix dce:    <http://purl.org/dc/elements/1.1/> .
 @prefix dbo:    <http://dbpedia.org/ontology/> .
 @prefix bot:    <https://w3id.org/bot#> .
-@prefix ifc:    <http://www.buildingsmart-tech.org/ifcOWL/IFC4_ADD2#> .
+@prefix gr:     <http://purl.org/goodrelations/v1#> .
 
-@prefix product: <https://w3id.org/product#> .
+@prefix prod <https://w3id.org/product#> .
 @base <https://w3id.org/product#> .
 
 voaf:Vocabulary a owl:Class .
@@ -68,7 +68,8 @@ foaf:name a owl:DatatypeProperty .
 #################################
 product:Product 
         a owl:Class ;
-        rdfs:subClassOf bot:Element ;
+        rdfs:subClassOf bot:Element ,
+                        gr:ProductOrService ;
         rdfs:label      "Product"@en ,
                         "Product"@nl ,
                         "Produkt"@da ;
