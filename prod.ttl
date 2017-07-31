@@ -76,3 +76,11 @@ product:Product
         rdfs:comment    "A product is an article or substance that is manufactured or refined for sale"@en ,
 						"Een product is een artikel of substantie die aangemaakt of bijgewerkt wordt voor verkoop"@nl ,
                         "Et produkt er en artikel eller substans som er fremstillet eller rafineret til salg"@da .
+
+#################################
+# OBJECT PROPERTIES
+#################################
+product:aggregates
+        a owl:ObjectProperty ;
+        rdfs:domain product:Product ;
+        rdfs:range product:Product .
