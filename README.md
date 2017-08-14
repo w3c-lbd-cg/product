@@ -6,13 +6,13 @@ Developments are stored in the Development branch and feature branches are creat
 
 ## Adding content to PRODUCT
 1. Fork this repository. 
-2. Add contribution to bot or separate alignment file.
+2. Add contribution to product or separate alignment file.
 3. Commit your changes and submit a [pull request](https://github.com/perma-id/w3id.org/pulls).
 4. w3c-lbd administrators will review your pull request and merge it if everything looks correct. Once the pull request is merged, the changes go live immediately.
 
 ## Example of using PRODUCT
 
-Example of using BOT in [Turtle syntax](https://www.w3.org/TeamSubmission/turtle/).
+Example of using PRODUCT in [Turtle syntax](https://www.w3.org/TeamSubmission/turtle/).
 ```turtle
 @prefix bot:  <https://w3id.org/bot#> .
 @prefix product:  <https://w3id.org/product#> .
