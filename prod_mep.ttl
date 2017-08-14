@@ -141,7 +141,7 @@ product:DuctTransition
 product:GateValve
         a owl:Class ;
         rdfs:subClassOf product:Valve ;
-        rdfs:label      "Geta Valve"@en ,
+        rdfs:label      "Gate Valve"@en ,
                         "Afspærringsventil"@da ;
         skos:altLabel   "2-way Valve"@en ,
                         "Shut-off Valve"@en ,
