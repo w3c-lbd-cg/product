@@ -66,7 +66,7 @@ product:Wall
         rdfs:subClassOf product:Product ;
         owl:equivalentClass 
         rdfs:label      "Wall"@en ,
-			"Muur"@nl ,
+						"Muur"@nl ,
                         "Væg"@da .
 						
 product:Window
