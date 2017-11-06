@@ -1,7 +1,7 @@
 # PRODUCT: Building Product Ontology
 
 ## Version control
-The latest version is available from w3id.org/product#. This points to the master branch of this repository.
+The latest version is available from [https://w3id.org/product#](https://w3id.org/product#). This points to the master branch of this repository.
 Developments are stored in the Development branch and feature branches are created for features that are not yet implemented in the development branch.
 
 ## Adding content to PRODUCT
