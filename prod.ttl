@@ -51,6 +51,9 @@ foaf:name a owl:DatatypeProperty .
     dcterms:description """The PRODUCT Ontology (PRODUCT) extends the Building Topology Ontology (BOT) with more specific building elements."""@en ;
     dcterms:creator [a foaf:Person ; foaf:name "Mads Holten Rasmussen" ] ;
     dcterms:creator [a foaf:Person ; foaf:name "Pieter Pauwels" ] ;
+    dcterms:contributor [a foaf:Person ; foaf:name "Maxime Lefrançois" ] ;
+    dcterms:contributor [a foaf:Person ; foaf:name "Georg Ferdinand Schneider" ] ;
+    dcterms:contributor [a foaf:Person ; foaf:name "Gonçal Costa" ] ;
     #dcterms:contributor [a foaf:Person ; foaf:name "" ] ;
     dcterms:license <https://creativecommons.org/licenses/by/1.0/> ;
     vann:preferredNamespacePrefix "product" ;
