@@ -17,12 +17,12 @@
 @prefix foaf:   <http://xmlns.com/foaf/0.1/> .
 @prefix dce:    <http://purl.org/dc/elements/1.1/> .
 @prefix dbo:    <http://dbpedia.org/ontology/> .
-@prefix dbr:    <http://dbpedia.org/resource/> .
 @prefix bot:    <https://w3id.org/bot#> .
-@prefix ifc:    <http://www.buildingsmart-tech.org/ifcOWL/IFC4_ADD2#> .
+@prefix schema: <http://schema.org/> .
 
-@prefix product: <https://w3id.org/product#> .
-@base <https://w3id.org/product#> . 
+
+@prefix prod: <https://w3id.org/product#> .
+@base <https://w3id.org/product> .
 
 voaf:Vocabulary a owl:Class .
 dcterms:title a owl:AnnotationProperty .
@@ -41,52 +41,50 @@ foaf:name a owl:DatatypeProperty .
 #################################
 # METADATA
 #################################
-product:Furnishing a owl:Ontology , voaf:Vocabulary ;
-    dce:modified "July 12th 2017"^^xsd:string ;
-    owl:versionInfo "July 12th 2017"^^xsd:string ;
-    dcterms:issued "2017-07-12"^^xsd:date ;
-    #owl:versionIRI <https://w3id.org/product/product-0.1.0> ;
-    owl:versionInfo "v0.1.0" ;
-    #owl:priorVersion <https://w3id.org/product/product-0.1.0> ;
-    dcterms:title "PRODUCT Furnishing"@en ;
-    dcterms:description """The Furnishing ontology extends the PRODUCT ontology with specific furnishing products."""@en ;
+<https://w3id.org/product> rdf:type voaf:Vocabulary , 
+                                 owl:Ontology ;
+    dcterms:title "PRODUCT: The building product ontology "@en ;
+    dcterms:description """The PRODUCT Ontology (PRODUCT) extends the Building Topology Ontology (BOT) with more specific building elements."""@en ;
     dcterms:creator [a foaf:Person ; foaf:name "Mads Holten Rasmussen" ] ;
     dcterms:creator [a foaf:Person ; foaf:name "Pieter Pauwels" ] ;
+    dcterms:creator [a foaf:Person ; foaf:name "Georg Ferdinand Schneider" ] ;
+    dcterms:contributor [a foaf:Person ; foaf:name "Maxime Lefrançois" ] ;
+    dcterms:contributor [a foaf:Person ; foaf:name "Gonçal Costa" ] ;
     #dcterms:contributor [a foaf:Person ; foaf:name "" ] ;
     dcterms:license <https://creativecommons.org/licenses/by/1.0/> ;
-    vann:preferredNamespacePrefix "product" ;
+    vann:preferredNamespacePrefix "prod" ;
     vann:preferredNamespaceUri <https://w3id.org/product#> ;
     dce:Language "en" ;
-    dce:title "PRODUCT Furnishing" ;
+    dce:title "PRODUCT a ontology for building products" ;
     dce:description "Products in the AEC industry" .
-
+     
 #################################
 # CLASSES
 #################################
-product:Chair
-        a owl:Class ;
-        owl:equivalentClass dbr:Chair ;
-        rdfs:subClassOf product:Product ;
-        rdfs:label      "Chair"@en ,
-                        "Stol"@da .
+prod:Product a owl:Class ;
+        rdfs:subClassOf bot:Element ,
+                        schema:Product ;
+        rdfs:label      "Product"@en ;
+        rdfs:comment    "A product is an article or substance that is manufactured or refined for sale"@en .
+						
+prod:Property a owl:Class ;
+        rdfs:subClassOf schema:Property ;
+        rdfs:label      "Property"@en ;
+        rdfs:comment    "A instance of a property of a product. Usually only a blind node."@en .                        
+                        
+#################################
+# OBJECT PROPERTIES
+#################################
 
-product:Table
-        a owl:Class ;
-        owl:equivalentClass dbr:Table_(furniture) ;
-        rdfs:subClassOf product:Product ;
-        rdfs:label      "Table"@en ,
-                        "Bord"@da .
+prod:aggregates a owl:ObjectProperty ;
+        rdfs:domain prod:Product ;
+        rdfs:range prod:Product ;
+        rdfs:label "aggregates"@en ;
+        rdfs:comment "Object property to describe the composition of a product which is aggregated from several sub products."@en .
 
-product:Couch
-        a owl:Class ;
-        owl:equivalentClass dbr:Couch ;
-        rdfs:subClassOf product:Product ;
-        rdfs:label      "Couch"@en ,
-                        "Sofa"@da .
-
-product:Closet
-        a owl:Class ;
-        owl:equivalentClass dbr:Closet ;
-        rdfs:subClassOf product:Product ;
-        rdfs:label      "Closet"@en ,
-                        "Skab"@da .
+prod:hasProperty a owl:ObjectProperty ;
+        rdfs:subPropertyOf schema:additionalProperty ;
+        rdfs:domain prod:Product ;
+        rdfs:range prod:Property ;
+        rdfs:label "hasProperty"@en ;
+        rdfs:comment "Generic super property which can be specified depending on the respective needs of a product ontology."@en .        
