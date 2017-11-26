@@ -2,7 +2,8 @@
 
 This branch contains a proposal for a novel lightweight building product ontology. The ontology only contains two classes and two object properties. The ontology is aligned to BOT and to schema.org.
 
-´´´
+Example of PRODUCT in [Turtle syntax](https://www.w3.org/TeamSubmission/turtle/).
+```turtle
 # Copyright 2017 W3C Linked Building Data Community Group.
 # 
 # This work is licensed under a Creative Commons Attribution License. 
@@ -80,7 +81,7 @@ prod:hasProperty a owl:ObjectProperty ;
         rdfs:range prod:Property ;
         rdfs:label "hasProperty"@en ;
 rdfs:comment "Generic super property which can be specified depending on the respective needs of a product ontology."@en . 
-´´´
+```
 
 
 
@@ -92,7 +93,8 @@ The preferred way to extend from PRODUCT ontology is through inheritance (rdfs:s
 
 As one taxonomy to further specify PRODUCT ontology we propose the P4Bldg ontology. A taxonomy for products which had been derived from ifcOWL4Add2 using the included python script.
 
-´´´
+Exerpt of using P4Bldg in [Turtle syntax](https://www.w3.org/TeamSubmission/turtle/).
+```turtle
 @prefix dcterms: <http://purl.org/dc/terms/> .
 @prefix ifc: <http://www.buildingsmart-tech.org/ifcOWL/IFC4_ADD2#> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
@@ -124,5 +126,5 @@ p4bldg:Actuator-HANDOPERATEDACTUATOR a owl:Class ;
     rdfs:seeAlso ifc:IfcActuatorEnumType ;
 rdfs:subClassOf p4bldg:Actuator .
 
-´´´
+```
 
