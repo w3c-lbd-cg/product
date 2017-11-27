@@ -60,10 +60,7 @@ foaf:name a owl:DatatypeProperty .
     vann:preferredNamespaceUri <https://w3id.org/product#> ;
     dce:Language "en" ;
     dce:title "PRODUCT" ;
-    dce:description "Products in the AEC industry" ;
-    owl:imports <https://w3id.org/product/BuildingElements> ,
-                <https://w3id.org/product/MEP> ,
-                <https://w3id.org/product/Furnishing> .
+    dce:description "Products in the AEC industry" .
 
 #################################
 # CLASSES
