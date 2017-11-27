@@ -19,7 +19,7 @@
 @prefix dbo:    <http://dbpedia.org/ontology/> .
 @prefix bot:    <https://w3id.org/bot#> .
 
-@prefix prod <https://w3id.org/product#> .
+@prefix product: <https://w3id.org/product#> .
 @base <https://w3id.org/product#> .
 
 voaf:Vocabulary a owl:Class .
