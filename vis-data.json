@@ -30,6 +30,8 @@
             "inst:buildingA a bot:Building .",
             "inst:storey00 a bot:Storey .",
             "inst:spaceR-01 a bot:Space .\n",
+            
+            "inst:site100 a bot:Site .",
 
             "# RELATIONS",
             "inst:siteXX bot:hasBuilding inst:buildingA .",
