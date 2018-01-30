@@ -1,0 +1,40 @@
+[
+    {
+        "title": "0: Introduction",
+        "description": [
+            "This is a test"
+        ],
+        "query": "",
+        "triples": ""
+    },
+    {
+        "title": "1: Test",
+        "description": [
+            "First dataset"
+        ],
+        "query": [
+            "PREFIX bot:  <https://w3id.org/bot#>",
+            "PREFIX rdf:  <http://www.w3.org/1999/02/22-rdf-syntax-ns#>\n",
+            "CONSTRUCT",
+            "WHERE {",
+            "\t?s ?p ?o",
+            "}"
+        ],
+        "triples": [
+            "@prefix bot:  <https://w3id.org/bot#> .",
+            "@prefix rdf:  <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .",
+            "@prefix inst: <https://example.org/projectXX/> .\n",
+
+            "# INSTANCES",
+            "inst:siteXX a bot:Site .",
+            "inst:buildingA a bot:Building .",
+            "inst:storey00 a bot:Storey .",
+            "inst:spaceR-01 a bot:Space .\n",
+
+            "# RELATIONS",
+            "inst:siteXX bot:hasBuilding inst:buildingA .",
+            "inst:buildingA bot:hasStorey inst:storey00 .",
+            "inst:storey00 bot:hasSpace inst:spaceR-01 ."
+        ]
+    }
+]
