@@ -25,9 +25,9 @@
         "triples": [
             "@prefix bot:    <https://w3id.org/bot#> .",
             "@prefix rdf:    <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .",
-            "@prefix inst:   <https://example.org/> .",
-            "@prefix pto:    <https://example.org/> .",
-            "@prefix schema: <http://www.productontology.org/id/> .\n",
+            "@prefix inst:   <https://example.com/> .",
+            "@prefix schema: <https://schema.org/> .",
+            "@prefix pto:    <http://www.productontology.org/id/> .\n",
 
             "# INSTANCES",
             "inst:hea1 a bot:Element , schema:ProductModel , schema:Product ;",
