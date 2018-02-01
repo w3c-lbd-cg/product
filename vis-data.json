@@ -11,7 +11,8 @@
         "title": "1: Georg",
         "description": [
             "Suggested by Georg [here](https://github.com/w3c-lbd-cg/product/issues/2#issuecomment-344228530)",
-            "![alt text](https://user-images.githubusercontent.com/14927790/35581146-3c2e4e6c-05eb-11e8-8fa1-0068d640c2d9.jpg \"data visualization\")"
+            "![alt text](https://user-images.githubusercontent.com/14927790/35581146-3c2e4e6c-05eb-11e8-8fa1-0068d640c2d9.jpg \"data visualization\")",
+            "`code test`"
         ],
         "query": [
             "PREFIX bot:  <https://w3id.org/bot#>",
