@@ -32,10 +32,10 @@
             "# INSTANCES",
             "inst:hea1 a bot:Element , schema:ProductModel , schema:Product ;",
             "\tschema:additionalType pto:Heat_pump ;",
-            "\tadditionalProperty inst:val1 .",
+            "\tschema:additionalProperty inst:val1 .",
             "inst:val1 a schema:PropertyValue ;",
             "\tschema:additionalType pto:coefficient_of_performance ;",
-            "\tschema:value \"3.8\""
+            "\tschema:value \"3.8\" ."
         ]
     }
 ]
