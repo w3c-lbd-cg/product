@@ -37,17 +37,6 @@
                                         "rdfs:range gr:QuantitativeValue .",
         "gr:weight rdf:type owl:ObjectProperty ;",
           "rdfs:subPropertyOf gr:quantitativeProductOrServiceProperty .",          
-        "gr:valueReference rdf:type owl:ObjectProperty ;",
-                  "rdfs:domain [ rdf:type owl:Class ;",
-                                "owl:unionOf ( gr:QualitativeValue",
-                                              "gr:QuantitativeValue",
-                                            ")",
-                              "] ;",
-                  "rdfs:range [ rdf:type owl:Class ;",
-                               "owl:unionOf ( gr:QualitativeValue",
-                                             "gr:QuantitativeValue",
-                                           ")",
-                             "] ."
-        ]
+       ]
     }
 ]
