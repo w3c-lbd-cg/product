@@ -13,7 +13,7 @@
             "`code test`"
         ],
         "query": [
-            "Select ?s ?p ?o",
+            "SELECT ?s ?p ?o",
             "WHERE {",
             "\t?s ?p ?o",
             "}"
