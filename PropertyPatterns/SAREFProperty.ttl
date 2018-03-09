@@ -1,0 +1,28 @@
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix saref: <http://w3id.org/saref#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@base <https://w3id.org/ibp/SarefPropertyPatternOntology> .
+
+<https://w3id.org/ibp/SarefPropertyPatternOntology> rdf:type owl:Ontology ;
+    dcterms:creator "Georg Ferdinand Schneider" ;
+    dcterms:creator <https://www.researchgate.net/profile/Georg_Schneider3> ;
+	dcterms:license <http://creativecommons.org/licenses/by-sa/4.0> .
+
+saref:Device rdf:type owl:Class .
+saref:Property rdf:type owl:Class .
+
+saref:Device saref:controlsProperty saref:Property .
+saref:Device saref:measuresProperty saref:Property .
+
+saref:Property saref:relatesToMeasurement saref:Measurement .
+saref:Energy rdfs:subClassOf saref:Property .
+
+saref:Measurement rdf:type owl:Class ;
+    saref:hasTimeStamp xsd:dateTime ;
+    saref:hasValue xsd:float ;
+    saref:isMeasuredIn saref:UnitOfMeasure .
+
+
