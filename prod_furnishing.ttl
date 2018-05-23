@@ -72,7 +72,7 @@ product:Chair
 
 product:Table
         a owl:Class ;
-        owl:equivalentClass dbr:Table_(furniture) ;
+        owl:equivalentClass <http://dbpedia.org/resource/Table_(furniture)> ;
         rdfs:subClassOf product:Product ;
         rdfs:label      "Table"@en ,
                         "Bord"@da .
