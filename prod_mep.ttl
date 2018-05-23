@@ -69,7 +69,7 @@ product:MEP a owl:Ontology , voaf:Vocabulary ;
 #########
 product:Pipe
         a owl:Class ;
-        owl:equivalentClass dbr:Pipe_(fluid_conveyance) ;
+        owl:equivalentClass <http://dbpedia.org/resource/Pipe_(fluid_conveyance)> ;
         rdfs:subClassOf product:Product ;
         rdfs:label      "Pipe"@en ,
                         "Rør"@da .
@@ -114,13 +114,13 @@ product:HeatExchanger
 #######
 product:Duct
         a owl:Class ;
-        owl:equivalentClass dbr:Duct_(HVAC) ;
+        owl:equivalentClass <http://dbpedia.org/resource/Duct_(HVAC)> ;
         rdfs:subClassOf product:Product ;
         rdfs:label      "Duct"@en ,
                         "Kanal"@da .
 product:Damper
         a owl:Class ;
-        owl:equivalentClass dbr:Damper_(flow) ;
+        owl:equivalentClass <http://dbpedia.org/resource/Damper_(flow)> ;
         rdfs:subClassOf product:Product ;
         rdfs:label      "Damper"@en ,
                         "Spjæld"@da .
