@@ -313,14 +313,14 @@ product:GateDamper
 # Disjunctive classes
 [] a owl:AllDisjointClasses ;
         owl:members
-              ( prod:Valve
-                prod:Fitting
-                prod:Pump
-                prod:Meter
-                prod:Coil
-                prod:Humidifier
-                prod:HeatExchanger
-                prod:Damper
-                prod:DuctTransition
-                prod:Duct
-                prod:Pipe ) .
+              ( product:Valve
+                product:Fitting
+                product:Pump
+                product:Meter
+                product:Coil
+                product:Humidifier
+                product:HeatExchanger
+                product:Damper
+                product:DuctTransition
+                product:Duct
+                product:Pipe ) .
