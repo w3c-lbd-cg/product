@@ -64,7 +64,6 @@ product:BuildingElements a owl:Ontology , voaf:Vocabulary ;
 product:Wall
         a owl:Class ;
         rdfs:subClassOf product:Product ;
-        owl:equivalentClass 
         rdfs:label      "Wall"@en ,
 						"Muur"@nl ,
                         "Væg"@da .
