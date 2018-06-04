@@ -71,10 +71,8 @@ product:Product
                         "Product"@nl ,
                         "Produkt"@da ,
 			"Prodotto"@it;
-        rdfs:comment    "A product is an article or substance that is manufactured or refined for sale"@en ,
-			"Een product is een artikel of substantie die aangemaakt of bijgewerkt wordt voor verkoop"@nl ,
-                        "Et produkt er en artikel eller substans som er fremstillet eller rafineret til salg"@da ,
-			"Un prodotto è un articolo o sostanza che ha subito una lavorazione o elaborazione a scòpo di vendita"@it.
+        rdfs:comment    "A product is any element that is part of or can be part of a building. Examples are beams, windows, pipes, columns, and so on."@en ,
+			"Een product is een element dat deel uitmaakt van of deel uit kan maken van een gebouw. Voorbeelden zijn balken, ramen, buizen, kolommen, kanalen, enzovoort."@nl .
 
 #################################
 # OBJECT PROPERTIES
