@@ -30,10 +30,10 @@ inst:storey00 a bot:Storey ;
 inst:storey01 a bot:Storey .
 
 inst:space00aa a bot:Space ;
-               bot:containsElement inst:heater235 .
+               bot:containsElement inst:heater235 ;
                bot:adjacentElement inst:wall443 ,
-                                   inst:wall769 .
-                                   inst:wall209 .
+                                   inst:wall769 ,
+                                   inst:wall209 ,
                                    inst:floor23 .
 								   
 inst:space00cg a bot:Space .
