@@ -81,7 +81,8 @@ furn:Chair
 furn:Table
         a owl:Class ;
         rdfs:subClassOf furn:Furniture ;
-		rdfs:seeAlso ifc:IfcFurnitureEnumType ;
+		    rdfs:seeAlso ifc:IfcFurnitureEnumType ;
+        owl:equivalentClass <http://dbpedia.org/resource/Table_(furniture)> ;
         rdfs:label      "Table"@en ,
                         "Bord"@da .
 
